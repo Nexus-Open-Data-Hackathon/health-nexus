@@ -18,8 +18,8 @@ from typing import Literal
 from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from database import SearchEvent
-from models.surveillance import DispensingRecord, SurveillanceAlert
+from ...database import SearchEvent
+from .surveillance import DispensingRecord, SurveillanceAlert
 
 # ---------------------------------------------------------------------------
 # Constants

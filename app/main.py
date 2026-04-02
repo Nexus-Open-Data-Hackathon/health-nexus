@@ -9,15 +9,15 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from config import settings
+from .config import settings
 
 # Import ALL models so Alembic's autogenerate sees every table
-from models.core import Facility, District, Medicine, ICD10Code  # noqa: F401
-from models.surveillance import DispensingRecord, SurveillanceAlert  # noqa: F401
+from .models.core import Facility, District, Medicine, ICD10Code  # noqa: F401
+from .models.surveillance import DispensingRecord, SurveillanceAlert  # noqa: F401
 
-from routers.facilities import router as facilities_router
-from routers.search import router as search_router
-from routers.surveillance import router as surveillance_router
+from .routers.facilities import router as facilities_router
+from .routers.search import router as search_router
+from .routers.surveillance import router as surveillance_router
 
 
 @asynccontextmanager

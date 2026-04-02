@@ -26,8 +26,8 @@ from rapidfuzz import fuzz, process
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from database import SearchClick, SearchEvent, get_db
-from models.core import Facility, Medicine, ICD10Code
+from ..database import SearchClick, SearchEvent, get_db
+from ..models.core import Facility, Medicine, ICD10Code
 
 router = APIRouter(prefix="/api/v1/cms/search", tags=["CMS – Search"])
 
